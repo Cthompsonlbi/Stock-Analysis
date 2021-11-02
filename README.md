@@ -30,27 +30,31 @@ After evaluating the original code above, better use of arrays within the code c
 
 ![DimTickers](resources/DimTickers.PNG)
 
-*   However, by implementing
+*   For the refactored code however, implementing variables for tickervolumes, starting prices and ending prices as seen below, allows the code to store more data temporarily. 
+![MultipleArrays](resources/MultipleArrays.PNG)
+
+*   Then the tickerIndex steps through each tickers index, sets the volume to zero as shown below. 
+![TickedrIndexSetVolumeToZero](resources/TickerIndexSetVolumeToZero.PNG)
+
+*  From there the code steps through the data and calculates the volume and stores data for each variable listed above for the respective ticker sympbol and then the ticker indexed in incremented to the next index.  The snippit of code below shows the index of the tickers through the tickerIndex. It also shows the ticker volumes and starting and ending prices in relation to the respective tickerIndex.
+![TickedrIndexSetVolumeToZero](resources/CodeStoresAllDataToArray.PNG)
+
+*   Once the last index has been completed and all the data is stored to arrays, the data is then moved to the stock analysis worksheet and placed in the location as dictated by the code. The approach of using arrays proves to be more efficient and faster as time is not lost moving data one by one to the output destination. All data is collected and then in a single move it is carried to the output destination and the code ends after conditionals are checked and formatting is completed.
 
 ### Results of Original Code Vs Refactored Code
 
+The refactoring of code did lead to significant improvement with runtime.  This is visible with the screenshots below taken from the NON-Refactored tool.  The non-refactored code yielded test time results of .74 second for 2017 stock analysis and .64 seconds for 2018 stock analysis.
+![VBAChallenge2017nonRefactoredCode](resources/VBAChallenge2017nonRefactoredCode.jpg) , ![VBAChallenge2018nonRefactoredCode](resources/VBAChallenge2018nonRefactoredCode.jpg)
+
+While the refactored code, using arrays, yielded much faster test times.  The 2017 analysis yielded test time results of .19 seconds and the 2018 analysis yielded test time results of .21 seconds.  Quite an impressive improvement.
+![VBA_Challenge_2017](resources/VBA_Challenge_2017.jpg) , ![VBA_Challenge_2018](resources/VBA_Challenge_2018.jpg)
 
 ## Summary
 
 ### Advantages and Disadvantages of Refactoring Code
 
 ### Advantages and Disadvantages of Projects Original and Refactored code.
-Conclusion number one is the month of May appears to be the best month to start a kickstarter campaign and have a successful campaign.  While June and July appear to be the next best option for both starting and having a successful kickstarter.  
-The second conclusion is the month of December appears to have the least activity with regards to starting a kickstarter and the lowest success rate.
 
 
-- What can you conclude about the Outcomes based on Goals?
-Based on the Outcomes Based on Goals analysis, one can conclude that there is a a direct connection between the goal amount and whether fund raising campaign is successful or fails.  Goals set too high may not be reached and goals set too low may be insufficient to fund a project.  One must fully understand what is required to fund their projects and must set a number that is appropriate to reach their funding goals. 
 
-- What are some limitations of this dataset?
-The dataset as provided in this exercise fails to link the success and failure rates based on the launch month of the kick starter in relation to the goal amount for that kickstarter.  It would be interesting to see if the goals set for the month of May were more in line with a goal level set that have shown higher levels of success as highlighted in the Outcome vs Goals chart. 
-Another issue with the dataset provided, is it does not consider any macro or micro economic factors that my impact the success or failure rate of any given kickstarter campaign.  Macro factors such as recessions or micro factors such as less discretionary spending during the holidays than compared to the summer months.
 
-- What are some other possible tables and/or graphs that we could create?
-In addition to a table that cross references the range of goals for successful and failed kickstarters in the month of May, a table that shows year over year performances of kickstarters of multiple industries.  This information would prove to be valuable as it could show if certain industries are falling out of favor.  Are kickstarters associated with publishing falling out of favor when compared to technology kickstarters?  How do food kickstarter campaigns success/fail rates over multiple years trend in comparison to theater kickstarters.  This would be helpful to see this historical analysis so if Louise were to decide to have another fundraising campaign in the future, she would be more confident in its likelihood for success.
-Another interesting view would be how quickly did the successful kickstart campaign reached their goals.  How many days did it take for successful campaigns to reach their goals in relation to their start dates?  This could be helpful for Louise to set not only a reasonable goal, at the correct time of year, but also to provide it enough time.
