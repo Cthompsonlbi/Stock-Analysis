@@ -18,7 +18,7 @@ Upon Analysis of original code, there are multiple opportunities for improvement
 *  Data is placed in the appropriate column on the designated output work sheet one ticker at a time.
 
 #### Description of Function of Code
-    --The code starts with ticker index 0 and runs through each line of code to calculate the volume, then the starting price, then the ending price, and then the post-calculates the return. It then switches over to the Analysis Worksheet in the workbook and out puts the data.  Then it moves back to either the 2017 or 2018 workbook(depending on user selection) and repeats the process for tickers 1 and then 2 and so-on and so-on until it reaches the 12th index. A very serial process that requires movement across multiple tables and sets of data that takes time.  Although it is only fractions of seconds, these fractions add up and equate to slower run times.
+More indepth explanation of the points listed above would be the code starts with ticker index 0 and runs through each line of code to calculate the volume, then the starting price, then the ending price, and then the post-calculates the return. It then switches over to the Analysis Worksheet in the workbook and out puts the data.  Then it moves back to either the 2017 or 2018 workbook(depending on user selection) and repeats the process for tickers 1 and then 2 and so-on and so-on until it reaches the 12th index. A very serial process that requires movement across multiple tables and sets of data that takes time.  Although it is only fractions of seconds, these fractions add up and equate to slower run times.
 
 ![OriginalCodeLineByLineReduced](resources/OriginalCodeLineByLineReduced.png)
 
