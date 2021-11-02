@@ -24,7 +24,8 @@ Upon Analysis of original code, there are multiple opportunities for improvement
 ### Analysis of Opportunities of improvement
 After evaluating the original code above, better use of arrays within the code could greatly improve the performance of this analysis tool.  By using arrays one can store larger sets of data in relation to other arrays.  With a single loop more data can be collected and stored in a computer's memory to then be pushed to the output file destination at one time.  
 
-*   The screenshot below can be found in both the original and refractored code.  This code allows each stock ticker symbol to be stored to an array and then recalled through indexing.
+*   The screenshot below can be found in both the original and refractored code. This code allows each stock ticker symbol to be stored to an array and then recalled through indexing.
+
 ![DimTickers](resources/DimTickers.PNG)
 
 *****Place other images highlighting use of arrays in refractored code
