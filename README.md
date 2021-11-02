@@ -30,13 +30,16 @@ After evaluating the original code above, better use of arrays within the code c
 
 ![DimTickers](resources/DimTickers.PNG)
 
-*   For the refactored code however, implementing variables for tickervolumes, starting prices and ending prices as seen below, allows the code to store more data temporarily. 
+*   For the refactored code however, implementing variables for tickervolumes, starting prices and ending prices as seen below, allows the code to store more data temporarily.
+ 
 ![MultipleArrays](resources/MultipleArrays.PNG)
 
 *   Then the tickerIndex steps through each tickers index, sets the volume to zero as shown below. 
+
 ![TickedrIndexSetVolumeToZero](resources/TickerIndexSetVolumeToZero.PNG)
 
 *  From there the code steps through the data and calculates the volume and stores data for each variable listed above for the respective ticker sympbol and then the ticker indexed in incremented to the next index.  The snippit of code below shows the index of the tickers through the tickerIndex. It also shows the ticker volumes and starting and ending prices in relation to the respective tickerIndex.
+
 ![TickedrIndexSetVolumeToZero](resources/CodeStoresAllDataToArray.PNG)
 
 *   Once the last index has been completed and all the data is stored to arrays, the data is then moved to the stock analysis worksheet and placed in the location as dictated by the code. The approach of using arrays proves to be more efficient and faster as time is not lost moving data one by one to the output destination. All data is collected and then in a single move it is carried to the output destination and the code ends after conditionals are checked and formatting is completed.
@@ -44,9 +47,11 @@ After evaluating the original code above, better use of arrays within the code c
 ### Results of Original Code Vs Refactored Code
 
 The refactoring of code did lead to significant improvement with runtime.  This is visible with the screenshots below taken from the NON-Refactored tool.  The non-refactored code yielded test time results of .74 second for 2017 stock analysis and .64 seconds for 2018 stock analysis.
+
 ![VBAChallenge2017nonRefactoredCode](resources/VBAChallenge2017nonRefactoredCode.jpg) , ![VBAChallenge2018nonRefactoredCode](resources/VBAChallenge2018nonRefactoredCode.jpg)
 
 While the refactored code, using arrays, yielded much faster test times.  The 2017 analysis yielded test time results of .19 seconds and the 2018 analysis yielded test time results of .21 seconds.  Quite an impressive improvement.
+
 ![VBA_Challenge_2017](resources/VBA_Challenge_2017.jpg) , ![VBA_Challenge_2018](resources/VBA_Challenge_2018.jpg)
 
 ## Summary
