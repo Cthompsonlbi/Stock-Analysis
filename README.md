@@ -58,21 +58,21 @@ While the refactored code using arrays, yielded much faster test times.  The 201
 In summary, the refactoring of the code was successful and yield substantial runtime reductions that would make Steve happy.  This leads to the question, why would you not refactor all code.  This will be covered briefly in the next section below.
 
 ### Advantages and Disadvantages of Refactoring Code
-####The advantages of refactoring code are as follows:
+###The advantages of refactoring code are as follows:
 * Allows for faster running code
 * More efficiently lays out the code
 * Makes trouble shooting code easier as it will be easier to read and understand
 
-####Some of the disadvantages of refactoring of code are as follows:
+###Some of the disadvantages of refactoring of code are as follows:
 * Can be cumbersome if the program is large.  Harder to read and harder to understand where optimizations need to be made.
 * Without fully understanding what is going on with each piece of code, any change made to one piece of code may have negative consequences in other areas of the code
-* Once code is refactored, substantial amount of test and code validateion time would be required to make sure that all code is functioning as it should.  
+* Once code is refactored, substantial amount of test and code validation time would be required to make sure that all code is functioning as it should.  
     *Something that some companies may not be willing to spend time and money on.
 
 ### Advantages and Disadvantages of Projects Original and Refactored code.
-* The advantages of the projects original code is that based on the initial clients request, it met the need.  The layout of the code was sufficient and the test time was negligible considering that the original scope was to support 12 ticker symbols.  One could quickly put code together to support that request and turn around working code with very little effort. Disadvantages of the original code is it did not allow for flexibility and growth.  Clients often times change the scope of the project and request new features and additional capabilities. If the code is structured properly and developed with forward thinking involved, these possible changes can be accounted for early on in the project.
+* The advantages of the projects original code are that based on the initial client's request, it met the need.  The layout of the code was sufficient, and the test time was negligible considering that the original scope was to support 12 ticker symbols.  One could quickly put code together to support that request and turn around working code with very little effort. Disadvantages of the original code is it did not allow for flexibility and growth.  Clients often change the scope of the project and request new features and additional capabilities. If the code is structured properly and developed with forward thinking involved, these possible changes can be accounted for early in the project.
 
-* The advantage of the refactored code for this project is you get well thought out code that will allow you, or those that follow, to add new parameters and additional features that the client may want in the future with minimal effort.  Well written code would allow other programmers to modify your code while you continue to work on the next big deliverable!  Also, the code is easier to understand, read, and runs faster. Allowing the tool to handle larger data sets efficiently and extending the life of the tool.  Disadvantages of the refactored code is that for the inexperienced programmer, it may take a bit longer to create and to validate.  It may also be difficult to ensure the code is refactored in a way that will allow future functionality to be added as it can be difficult anticpating clients requests.
+* The advantage of the refactored code for this project is you get-well thought-out code that will allow you, or those that follow, to add new parameters and additional features that the client may want in the future with minimal effort.  Well written code would allow other programmers to modify your code while you continue to work on the next big deliverable!  Also, the code is easier to understand, read, and runs faster. Allowing the tool to handle larger data sets efficiently and extending the life of the tool.  Disadvantages of the refactored code is that for the inexperienced programmer, it may take a bit longer to create and to validate.  It may also be difficult to ensure the code is refactored in a way that will allow future functionality to be added as it can be difficult anticipating client's requests.
 
 
 
