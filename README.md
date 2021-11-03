@@ -4,21 +4,21 @@
 To provide an optimized data analysis tool that will allow Steve the ability to review large number of stocks, capture price over time along with calculated returns in a quick and efficient manner.
 
 ### Purpose
-Although Steve appreciates our intial deliverable that allows him to evaluate a handful of stocks quickly to help his parents reach their investement goals, he would like us to optimize the code to process the data faster.  This will allow Steve to increase the number of companies he can evaluate without increasing overall time required to process the data and analyze the results.  The remainder of this document will highlight the opportunities for improvement with the existing code and the approach to apply improvements to the code. 
+Although Steve appreciates our initial deliverable that allows him to evaluate a handful of stocks quickly to help his parents reach their investment goals, he would like us to optimize the code to process the data faster.  This will allow Steve to increase the number of companies he can evaluate without increasing overall time required to process the data and analyze the results.  The remainder of this document will highlight the opportunities for improvement with the existing code and the approach to apply improvements to the code. 
 
 ## Analysis and Challenges
 The challenge is to take code that works well and find ways to improve upon it so that it works even better.  This requires a review of the existing code and identify opportunities in the code to make improvements so that the tool can handle larger data sets and still produce appropriate analytics in a timely manner.
 
 ### Analysis of Original Code
 
-Upon Analysis of original code, there are multiple opportunities for improvement that could improve the speed and reduce computer time and resources to run calculations and output the data. Reviewing the code snippit below one will notice the following:
+Upon Analysis of original code, there are multiple opportunities for improvement that could improve the speed and reduce computer time and resources to run calculations and output the data. Reviewing the code snippet below one will notice the following:
 
 *  The code operates in a very serial manner. 
 *  Per ticker index, code is run one line at a time.  
 *  Data is placed in the appropriate column on the designated output work sheet one ticker at a time.
 
 #### Description of Function of Code
-More indepth explanation of the points listed above would be as follows; the code starts with ticker index 0 and runs through each line of code to calculate the volume, then the starting price, then the ending price, and then post-calculates the return. It then switches over to the Analysis Worksheet in the workbook and out puts the data.  Then it moves back to either the 2017 or 2018 workbook(depending on user selection) and repeats the process for tickers 1 and then 2 and so-on and so-on until it reaches the final index. A very serial process that requires movement across multiple sheets and multiple sets of data that increases time and need for computer resources.  Although it is only fractions of seconds, these fractions add up and equate to slower run times.  This very serial process can be seen below as data is collected for one ticker index then moved to an output location before returning and collecting data for the next index.
+More in-depth explanation of the points listed above would be as follows; the code starts with ticker index 0 and runs through each line of code to calculate the volume, then the starting price, then the ending price, and then post-calculates the return. It then switches over to the Analysis Worksheet in the workbook and out puts the data.  Then it moves back to either the 2017 or 2018 workbook (depending on user selection) and repeats the process for tickers 1 and then 2 and so-on and so-on until it reaches the final index. A very serial process that requires movement across multiple sheets and multiple sets of data that increases time and need for computer resources.  Although it is only fractions of seconds, these fractions add up and equate to slower run times.  This very serial process can be seen below as data is collected for one ticker index then moved to an output location before returning and collecting data for the next index.
 
 ![OriginalCodeLineByLineReduced](resources/OriginalCodeLineByLineReduced.png)
 
@@ -26,7 +26,7 @@ More indepth explanation of the points listed above would be as follows; the cod
 ### Analysis of Opportunities of improvement
 After evaluating the original code above, better use of arrays within the code could greatly improve the performance of this analysis tool.  By using arrays one can store larger sets of data in relation to other arrays.  With a single loop of code more data can be collected and stored in a computer's memory to then be pushed to the output file destination at one time.  
 
-*   The screenshot below can be found in both the original and refractored code. This code allows each stock ticker symbol to be stored to an array and then recalled through indexing.
+*   The screenshot below can be found in both the original and refactored code. This code allows each stock ticker symbol to be stored to an array and then recalled through indexing.
 
 ![DimTickers](resources/DimTickers.PNG)
 
@@ -38,7 +38,7 @@ After evaluating the original code above, better use of arrays within the code c
 
 ![TickedrIndexSetVolumeToZero](resources/TickerIndexSetVolumeToZero.PNG)
 
-*  From there the code steps through the data and calculates the volume and stores data for each variable listed above for the respective ticker sympbol and then the ticker index is incremented to the next index.  The snippit of code below shows the index of the tickers through the tickerIndex. It also shows the ticker volumes and starting and ending prices in relation to the respective tickerIndex.
+*  From there the code steps through the data and calculates the volume and stores data for each variable listed above for the respective ticker symbol and then the ticker index is incremented to the next index.  The snippet of code below shows the index of the tickers through the tickerIndex. It also shows the ticker volumes and starting and ending prices in relation to the respective tickerIndex.
 
 ![TickedrIndexSetVolumeToZero](resources/CodeStoresAllDataToArray.PNG)
 
