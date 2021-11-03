@@ -74,7 +74,7 @@ In summary, the refactoring of the code was successful and yield substantial run
 
 * The advantage of the refactored code for this project is you get well thought out code that will allow you, or those that follow, to add new parameters and additional features that the client may want in the future with minimal effort.  Well written code would allow other programmers to modify your code while you continue to work on the next big deliverable!  Also, the code is easier to understand, read, and runs faster. Allowing the tool to handle larger data sets efficiently and extending the life of the tool.  Disadvantages of the refactored code is that for the inexperienced programmer, it may take a bit longer to create and to validate.  It may also be difficult to ensure the code is refactored in a way that will allow future functionality to be added as it can be difficult anticpating clients requests.
 
-![VBA Challenge](resources/VBA_Challenge.xlsm)
+
 
 
 
