@@ -1,17 +1,17 @@
 Sub AllStocksAnalysisRefactored()
     Dim startTime As Single
     Dim endTime  As Single
-    
+
     'requests that the user inputs either 2017 or 2018
     yearValue = InputBox("What year would you like to run the analysis on?")
-        
-        'starts the runtime timer
+
+        'start the runtime timer
         startTime = Timer
     
     'Format the output sheet on All Stocks Analysis worksheet
     Worksheets("All Stocks Analysis").Activate
     
-    'modifies cell A1 to reflect year placed in header.
+    'modifies cell A1 to reflect year placed in header
     Range("A1").Value = "All Stocks (" + yearValue + ")"
     
     'Create a header row
@@ -134,5 +134,11 @@ Sub AllStocksAnalysisRefactored()
     
  'out put the total run time in a output MsgBox.
     MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
+
+End Sub
+
+Sub ClearCells()
+
+Cells.Clear
 
 End Sub
